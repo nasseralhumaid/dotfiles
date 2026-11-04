@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+IRIS_FLAG=""
+WALLPAPER=""
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -d|--dark)
+            IRIS_FLAG="--dark 1"
+            shift
+            ;;
+        -l|--light)
+            IRIS_FLAG="--dark -1"  # Or 0 depending on your preference for light mode
+            shift
+            ;;
+        *)
+            WALLPAPER="$1"
+            shift
+            ;;
+    esac
+done
+
+if [ -z "$WALLPAPER" ]; then
+    echo "Usage: set-wallpaper [-d|--dark] [-l|--light] <path-to-image>"
+    exit 1
+fi
+
+# Run Iris with the mapped flag and wallpaper
+if [ -n "$IRIS_FLAG" ]; then
+    iris $IRIS_FLAG "$WALLPAPER"
+else
+    iris "$WALLPAPER"
+fi
+
+# Set background with awww (strictly receives just the image)
+awww img "$WALLPAPER" --transition-type wipe
+
+pkill -USR1 nvim
+~/.config/hypr/scripts/reload.sh
