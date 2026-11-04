@@ -1,0 +1,7 @@
+-- This file is not required from init.lua.
+--
+-- It used to contain a QML-specific autocmd that set:
+--   vim.bo.indentexpr = "v:lua.vim.treesitter.indentexpr()"
+-- which does not exist, and conflicted with the cindent setup in
+-- lua/plugins/nvim-treesitter.lua. QML now uses the runtime indent script
+-- ($VIMRUNTIME/indent/qml.vim) via the FileType autocmd in options.lua.
