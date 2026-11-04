@@ -1,0 +1,16 @@
+@define-color bg {bg};
+@define-color surface {surface};
+@define-color fg {fg};
+@define-color dim {dim};
+@define-color accent {accent};
+@define-color red {red};
+@define-color green {green};
+@define-color yellow {yellow};
+@define-color text {fg};
+@define-color background {bg};
+@define-color background-sec {surface};
+@define-color background-alt {dim};
+@define-color foreground {fg};
+@define-color selected {accent};
+@define-color hover alpha({accent}, .6);
+@define-color urgent {red};
