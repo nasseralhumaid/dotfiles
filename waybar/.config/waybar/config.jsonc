@@ -1,0 +1,134 @@
+{
+    "position": "left",
+    "margin-top": 5,
+    "width": 72,
+
+
+    "modules-left": [
+        "custom/notification",
+        "hyprland/workspaces",
+        "pulseaudio/slider#out"
+    ],
+    "modules-center": [
+        "clock",
+        "tray"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "battery",
+    ],
+    "clock": {
+        "format": "\n{:%H:%M}",
+        "format-alt": "{:%A, %B %d, %Y (%R)} 󰃰 ",
+        "justify": "center",
+        "on-click-right": "calcure"
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 5 // 5 workspaces by default on every monitor
+        }
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10,
+        "icons": {
+            "blueman": "bluetooth",
+        }
+    },
+    "pulseaudio": {
+        "format": "{icon}\n{volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "justify": "center",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ],
+            "justify": "center",
+
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "interface": "wlp62s0",
+        "format": "{ifname}",
+        "justify": "center",
+        "format-wifi": "\n{signalStrength}%",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+    },
+
+
+    "network": {
+        "interface": "enp63s0",
+        "format": "{ifname}",
+        "justify": "center",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+    },
+
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "events": {
+            "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
+            "on-charging-100": "notify-send -u normal 'Battery Full!'",
+            "on-discharging": "notify-send -u normal 'Power Switch' Discharging",
+            "on-charging": "notify-send -u normal 'Power Switch' Charging'"
+        },
+        "format": "{icon}\n{capacity}%",
+        "format-icons": {
+            "default": ["", "", "", "", ""],
+            "charging": ["󱐋", "󱐋", "󱐋", "󱐋", "󱐋"],
+        },
+        "justify": "center"
+    },
+
+    "custom/notification": {
+        "tooltip": true,
+        "format": "<span size='16pt'>{icon}</span>",
+        "format-icons": {
+        "notification": "󱈸",
+        "none": "",
+        "dnd-notification": "󰂠",
+        "dnd-none": "󰪓",
+        "inhibited-notification": "󰂛",
+        "inhibited-none": "󰪑",
+        "dnd-inhibited-notification": "󰂛",
+        "dnd-inhibited-none": "󰪑"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "pulseaudio/slider#out": {
+        "min": 0,
+        "max": 100,
+        "orientation": "vertical",
+        "zero-on-mute": false,
+        "unmute-on-volume-change": false
+    },
+}
