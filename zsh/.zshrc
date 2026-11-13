@@ -6,7 +6,19 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH="$PATH:/home/nasser/.local/bin"
 export PATH="$PATH:/home/nasser/.cargo/bin"
 
-cat ~/.cache/iris/sequences
+#cat ~/.cache/iris/sequences
+
+apply_sequences() {
+  local f="$HOME/.cache/iris/sequences" m
+  [ -t 1 ] || return
+  [ -r "$f" ] || return
+  m=$(stat -c %Y -- "$f" 2>/dev/null) || return
+  if [ "$m" != "${_seq_mtime:-}" ]; then
+    _seq_mtime=$m
+    cat -- "$f" 2>/dev/null
+  fi
+}
+precmd_functions+=(apply_sequences)
 
 #alias notify-send="notify-send.sh"
 alias ls="eza -l --icons --group-directories-first"

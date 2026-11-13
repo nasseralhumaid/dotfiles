@@ -33,7 +33,7 @@ else
 fi
 
 # Set background with awww (strictly receives just the image)
-awww img "$WALLPAPER" --transition-type wipe
+awww img "$WALLPAPER" --transition-type wave --transition-angle 180 --transition-bezier .06,.82,.31,1.02 --transition-duration 2 --transition-fps 60
 
 pkill -USR1 nvim
 ~/.config/hypr/scripts/reload.sh
