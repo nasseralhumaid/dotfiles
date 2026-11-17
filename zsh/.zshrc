@@ -81,3 +81,6 @@ zsh-defer -c 'eval "$(starship init zsh)"'
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 autoload -U compinit; compinit
+
+# OpenCode-Unlimited
+export PATH="/home/nasser/OpenCode-Unlimited/bin:$PATH"

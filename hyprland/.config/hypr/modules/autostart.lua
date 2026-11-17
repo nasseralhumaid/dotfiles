@@ -16,6 +16,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("swayosd-server")
 	hl.exec_cmd("foot --server")
+	hl.exec_cmd("netbird-ui")
 
 	-- 4. Screen Recorder UI (Starts AFTER Portals & DBus are online)
 	hl.exec_cmd("GSR_CUDA=1 gsr-ui")

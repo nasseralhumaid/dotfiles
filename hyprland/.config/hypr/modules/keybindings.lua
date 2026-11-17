@@ -1,7 +1,7 @@
 local mainMod = "SUPER"
 local programs = require("modules.programs")
 
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/Screenshots/"))
+hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o ~/Pictures/Screenshots/"))
 hl.bind(mainMod .. " + SHIFT + s", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/Screenshots/"))
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(programs.terminal))
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
