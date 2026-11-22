@@ -11,7 +11,7 @@ hl.on("hyprland.start", function()
 	-- 3. Desktop Shell & Utilities
 	hl.exec_cmd("sunsetr")
 	hl.exec_cmd("awww-daemon")
-	hl.exec_cmd("waybar")
+	hl.exec_cmd("waybar -c ~/.config/waybar/hyprland/config.jsonc -s ~/.config/waybar/hyprland/style.css")
 	hl.exec_cmd("swaync")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("swayosd-server")

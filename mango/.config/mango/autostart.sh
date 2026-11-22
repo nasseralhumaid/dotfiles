@@ -10,7 +10,7 @@ pipewire >/dev/null 2>&1 &
 
 sunsetr >/dev/null 2>&1 &
 awww-daemon >/dev/null 2>&1 &
-waybar >/dev/null 2>&1 &
+waybar -c ~/.config/waybar/mango/config.jsonc -s ~/.config/waybar/mango/style.css
 swaync >/dev/null 2>&1 &
 swayosd-server >/dev/null 2>&1 &
 foot --server >/dev/null 2>&1 &

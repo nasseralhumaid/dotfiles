@@ -1,0 +1,138 @@
+@import "/home/nasser/.cache/iris/colors-waybar.css";
+
+* {
+    border: none;
+    border-radius: 10px;
+
+    font-family: "Symbols Nerd Font Mono", "Maple Mono NL NF";
+
+    font-size: 13px;
+    font-weight: normal;
+
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+tooltip {
+    background: @bg;
+    border: 3px solid @surface;
+}
+
+tooltip label {
+    color: @fg;
+    padding: 6px;
+}
+
+#workspace {
+    font-weight: bold;
+    background-color: @bg;
+    padding: 5px 3px;
+    margin: 8px 0 8px;
+    border: 3px solid @surface;
+    color: @fg;
+}
+
+#workspaces button {
+
+    border: 3px solid @surface;
+    font-weight: bold;
+    padding: 4px 0;
+    margin: 3px 0;
+    color: @accent;
+    background-color: @bg;
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button label {
+    font-weight: bold;
+}
+
+#workspaces button.active {
+    border: 3px solid @surface;
+    font-weight: bold;
+    background-color: @accent;
+    color: @bg;
+    min-height: 40px;
+    transition: all 0.15s ease-in-out;
+    font-size: 13px;
+}
+
+#workspaces button:hover {
+
+    border: 3px solid @surface;
+    font-weight: bold;
+    background-color: @fg;
+    color: @bg;
+    min-height: 30px;
+    background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+
+    border: 3px solid @surface;
+    font-weight: bold;
+    background-color: @red;
+    color: @bg;
+    min-height: 50px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+#pulseaudio-slider slider {
+    opacity: 0;
+    background-image: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+
+    border: 3px solid @surface;
+    min-width: 10px;
+    min-height: 80px;
+    background: @bg;
+}
+
+#pulseaudio-slider highlight {
+    background: @accent;
+}
+
+#pulseaudio-slider.muted highlight {
+    background-color: @red;
+}
+
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#custom-notification {
+    background-color: @bg;
+    margin: 6px 8px;
+    border: 3px solid @surface;
+}
+
+#clock {
+    color: @accent;
+    font-weight: bold;
+}
+
+#custom-notification {
+    color: #478061;
+    margin: 0 8px 8px 8px;
+}
+
+#pulseaudio {
+    color: @yellow;
+}
+
+#network {
+    color: @accent;
+}
+
+#battery {
+    color: @green;
+}
