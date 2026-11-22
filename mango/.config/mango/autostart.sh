@@ -12,7 +12,6 @@ sunsetr >/dev/null 2>&1 &
 awww-daemon >/dev/null 2>&1 &
 waybar -c ~/.config/waybar/mango/config.jsonc -s ~/.config/waybar/mango/style.css >/dev/null 2>&1 &
 swaync >/dev/null 2>&1 &
-swayosd-server >/dev/null 2>&1 &
 foot --server >/dev/null 2>&1 &
 netbird-ui >/dev/null 2>&1 &
 GSR_CUDA=1 gsr-ui >/dev/null 2>&1 &
