@@ -193,10 +193,10 @@ overlay_color = 0x14a57cff
 # switch window status
 "SUPER+g" = "toggleglobal,"
 "ALT+Tab" = "togglejump,"
-"ALT+backslash" = "togglefloating,"
+"SUPER+t" = "togglefloating,"
 "ALT+a" = "togglemaximizescreen,"
 "ALT+f" = "togglefullscreen,"
-"ALT+SHIFT+f" = "togglefakefullscreen,"
+"SUPER+SHIFT+f" = "togglefakefullscreen,"
 "SUPER+i" = "minimized,"
 "SUPER+o" = "toggleoverlay,"
 "SUPER+SHIFT+I" = "restore_minimized"
