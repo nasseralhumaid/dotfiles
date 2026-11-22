@@ -236,15 +236,15 @@ overlay_color = 0x14a57cff
 # tag: move client to the tag and focus it
 # tagsilent: move client to the tag and not focus it
 # bind=Alt,1,tagsilent,1
-"Alt+1" = "tag,1,0"
-"Alt+2" = "tag,2,0"
-"Alt+3" = "tag,3,0"
-"Alt+4" = "tag,4,0"
-"Alt+5" = "tag,5,0"
-"Alt+6" = "tag,6,0"
-"Alt+7" = "tag,7,0"
-"Alt+8" = "tag,8,0"
-"Alt+9" = "tag,9,0"
+"SUPER+SHIFT+1" = "tag,1,0"
+"SUPER+SHIFT+2" = "tag,2,0"
+"SUPER+SHIFT+3" = "tag,3,0"
+"SUPER+SHIFT+4" = "tag,4,0"
+"SUPER+SHIFT+5" = "tag,5,0"
+"SUPER+SHIFT+6" = "tag,6,0"
+"SUPER+SHIFT+7" = "tag,7,0"
+"SUPER+SHIFT+8" = "tag,8,0"
+"SUPER+SHIFT+9" = "tag,9,0"
 
 # monitor switch
 #"alt+shift+Left" = "focusmon,left"
