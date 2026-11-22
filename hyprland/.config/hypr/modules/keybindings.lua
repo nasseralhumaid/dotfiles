@@ -15,7 +15,7 @@ hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(programs.menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. "+ R", hl.dsp.exec_cmd("~/.config/hypr/scripts/reload.sh"))
+hl.bind(mainMod .. "+ R", hl.dsp.exec_cmd("~/dotfiles/scripts/reload.sh"))
 
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
