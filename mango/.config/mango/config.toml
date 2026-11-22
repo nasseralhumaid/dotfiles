@@ -1,5 +1,7 @@
 [global]
 
+exec_once=~/.config/mango/autostart.sh
+
 # More option see https://github.com/DreamMaoMao/mango/wiki/
 # Window effect
 blur = 5
@@ -221,15 +223,15 @@ overlay_color = 0x14a57cff
 "CTRL+Right" = "viewtoright_have_client,0"
 "CTRL+SUPER+Left" = "tagtoleft,0"
 "CTRL+SUPER+Right" = "tagtoright,0"
-"Ctrl+1" = "view,1,0"
-"Ctrl+2" = "view,2,0"
-"Ctrl+3" = "view,3,0"
-"Ctrl+4" = "view,4,0"
-"Ctrl+5" = "view,5,0"
-"Ctrl+6" = "view,6,0"
-"Ctrl+7" = "view,7,0"
-"Ctrl+8" = "view,8,0"
-"Ctrl+9" = "view,9,0"
+"SUPER+1" = "view,1,0"
+"SUPER+2" = "view,2,0"
+"SUPER+3" = "view,3,0"
+"SUPER+4" = "view,4,0"
+"SUPER+5" = "view,5,0"
+"SUPER+6" = "view,6,0"
+"SUPER+7" = "view,7,0"
+"SUPER+8" = "view,8,0"
+"SUPER+9" = "view,9,0"
 
 # tag: move client to the tag and focus it
 # tagsilent: move client to the tag and not focus it
@@ -245,10 +247,10 @@ overlay_color = 0x14a57cff
 "Alt+9" = "tag,9,0"
 
 # monitor switch
-"alt+shift+Left" = "focusmon,left"
-"alt+shift+Right" = "focusmon,right"
-"SUPER+Alt+Left" = "tagmon,left"
-"SUPER+Alt+Right" = "tagmon,right"
+#"alt+shift+Left" = "focusmon,left"
+#"alt+shift+Right" = "focusmon,right"
+#"SUPER+Alt+Left" = "tagmon,left"
+#"SUPER+Alt+Right" = "tagmon,right"
 
 # gaps
 "ALT+SHIFT+X" = "incgaps,1"
@@ -256,16 +258,16 @@ overlay_color = 0x14a57cff
 "ALT+SHIFT+R" = "togglegaps"
 
 # movewin
-"CTRL+SHIFT+Up" = "movewin,+0,-50"
-"CTRL+SHIFT+Down" = "movewin,+0,+50"
-"CTRL+SHIFT+Left" = "movewin,-50,+0"
-"CTRL+SHIFT+Right" = "movewin,+50,+0"
+"SUPER+ALT+SHIFT+Up" = "movewin,+0,-50"
+"SUPER+ALT+SHIFT+Down" = "movewin,+0,+50"
+"SUPER+ALT+SHIFT+Left" = "movewin,-50,+0"
+"SUPER+ALT+SHIFT+Right" = "movewin,+50,+0"
 
 # resizewin
-"CTRL+ALT+Up" = "resizewin,+0,-50"
-"CTRL+ALT+Down" = "resizewin,+0,+50"
-"CTRL+ALT+Left" = "resizewin,-50,+0"
-"CTRL+ALT+Right" = "resizewin,+50,+0"
+"SUPER+ALT+Up" = "resizewin,+0,-50"
+"SUPER+ALT+Down" = "resizewin,+0,+50"
+"SUPER+ALT+Left" = "resizewin,-50,+0"
+"SUPER+ALT+Right" = "resizewin,+50,+0"
 
 [mousebind.default]
 
