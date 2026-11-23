@@ -186,6 +186,13 @@ y = 1080
 # key name refer to `xev` or `wev` command output,
 # mod keys name: super,ctrl,alt,shift,none
 # reload config
+
+"XF86AudioRaiseVolume" = "spawn,pactl set-sink-volume @DEFAULT_SINK@ +5%"
+"XF86AudioLowerVolume" = "spawn,pactl set-sink-volume @DEFAULT_SINK@ -5%"
+
+"XF86MonBrightnessUp" = "spawn,brightnessctl s +5%"
+"XF86MonBrightnessDown" = "spawn,brightnessctl s 5%-"
+
 "SUPER+r" = "reload_config"
 
 # menu and terminal
